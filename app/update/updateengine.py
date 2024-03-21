@@ -2,6 +2,13 @@ import logging as logger
 import os
 import click
 
+import filecmp
+import shutil
+import click
+from typing import Optional
+import dotenv
+
+
 class update:
 	def __init__():
 		logger.debug("-- Update class")
