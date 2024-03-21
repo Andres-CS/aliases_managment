@@ -1,0 +1,8 @@
+*.pyc
+
+# Peotry Stuff
+poetry.lock
+
+
+# Logging
+/var/log
