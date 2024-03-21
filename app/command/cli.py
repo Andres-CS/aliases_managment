@@ -32,4 +32,25 @@ def update(
 
 	else:
 		msg="You either passed an option not valid or no option at all."
-		click.echo(click.style(msg,fg="magenta"))
+		click.echo(click.style(msg,fg="yellow"))
+
+
+@main.command('list')
+def list():
+	"""List alias files"""
+	msg="'list', Feature not yet availabe."
+	click.echo(click.style(msg,fg="yellow"))
+
+
+@main.command('remove')
+def remove():
+	"""Remove alias files"""
+	msg="'remove', Feature not yet availabe."
+	click.echo(click.style(msg,fg="yellow"))
+
+
+@main.command('add')
+def add():
+	"""Adds alias files"""
+	msg="'add', Feature not yet availabe."
+	click.echo(click.style(msg,fg="yellow"))
