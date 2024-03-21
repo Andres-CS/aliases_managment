@@ -4,6 +4,9 @@ import uuid
 import logging as logger
 from dotenv import load_dotenv
 
+from .main import main
+from .cli import run
+
 
 # Load .env file
 try:

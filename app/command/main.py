@@ -114,11 +114,13 @@ def updateAliases():
 	if notFoundFiles:
 		not_found_files_msg(notFoundFiles)
 
-@click.command()
-@click.option('--action', help="Actions to be perform on alise files.")
-def main(action):
+# @click.command()
+# @click.option('--action', help="Actions to be perform on alise files.")
+# def main(action):
+def main():
 
 	logger.debug("-- Main --")
+	action = "test"
 
 	if(action == "update"):
 		updateAliases()	
