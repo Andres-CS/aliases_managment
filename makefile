@@ -1,9 +1,7 @@
 LOGPATH=./var/log/
-# LOGFILE=logs.log
 
 setup:
 	mkdir -p $(LOGPATH)
-	# touch $(LOGPATH)$(LOGFILE)
 
 dev: setup
 	poetry shell
