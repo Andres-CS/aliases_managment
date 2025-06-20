@@ -4,6 +4,7 @@ import os
 import click
 import uuid
 import dotenv
+from ..alias import Alias
 
 ENV_FILES = ['.env', '.env.dist']
 
@@ -51,5 +52,10 @@ def logging_levels():
 @logging_levels()
 @load_env_config(*ENV_FILES)
 @click.group(context_settings=dict(help_option_names=['-h','--help']))
-def main():
+@click.pass_context
+def main(ctx):
 	"""Application for managind aliases system files"""
+	initAlias = Alias()
+	aliases = initAlias.getAliases()
+
+	ctx.obj = aliases
