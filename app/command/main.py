@@ -31,8 +31,8 @@ def logging_levels():
 	def decorator(func):
 		try:
 			myUUID = uuid.uuid4()
-			filepath = str(os.getenv("LOGPATH"))+str(os.getenv("LOGFILE"))
-			envApp = str(os.getenv("ENV"))
+			filepath = str(os.getenv("APP_MA_LOGPATH"))+str(os.getenv("APP_MA_LOGFILE"))
+			envApp = str(os.getenv("APP_MA_ENV"))
 			logger.basicConfig(
 				filename=filepath, 
 				level=logger.DEBUG,
