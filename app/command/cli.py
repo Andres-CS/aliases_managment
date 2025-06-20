@@ -8,6 +8,7 @@ import dotenv
 
 from .main import main
 from app.update.updateengine import update
+from app.display import printAll
 
 
 @main.command('update')
@@ -36,11 +37,16 @@ def update(
 
 
 @main.command('list')
-def list():
-	"""List alias files"""
-	msg="'list', Feature not yet availabe."
-	click.echo(click.style(msg,fg="yellow"))
+@click.option('-a', '--all', is_flag=True, help="Display all settings about an alias files")
+@click.pass_obj
+def list(als, all):
+	"""List alias files """
+	# msg="'list', Feature not yet availabe."
+	# click.echo(click.style(msg,fg="yellow"))
 
+	if all:
+		printAll(als)
+		
 
 @main.command('remove')
 def remove():
