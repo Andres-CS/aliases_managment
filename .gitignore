@@ -4,6 +4,10 @@
 # Peotry Stuff
 poetry.lock
 
+# venv
+.venv
+.venv/*
+
 
 # Logging
 /var/log
